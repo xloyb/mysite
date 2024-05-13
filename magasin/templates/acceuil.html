@@ -3,26 +3,79 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Création d&#39;un design étape par étape - Etape n°1 : Le code xhtml</title>
+    <title>Création d'un design étape par étape - Etape n°1 : Le code xhtml</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom styles */
+        body {
+            padding-top: 56px; /* Adjust based on your navbar height */
+        }
+
+        #conteneur {
+            margin: 20px;
+        }
+
+        #header {
+            font-size: 24px;
+        }
+
+        #menu {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #menu li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        #contenu {
+            margin-top: 20px;
+        }
+
+        #footer {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="conteneur">
-        <h1 id="header"><a href="#" title="Colored Design - Accueil"><span>Colored Design</span></a></h1>
-        <nav>
-            <ul id="menu">
-                <li><a href="/magasin/">Application n°1 : Magasin</a></li>
-                <li><a href="#">Application n°2</a></li>
-                <li><a href="#">Application n°3</a></li>
-                <li><a href="/blog/">Application n°4: blog</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">Colored Design</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/magasin/">Application n°1 : Magasin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Application n°2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Application n°3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/">Application n°4: blog</a>
+                </li>
             </ul>
-        </nav>
-        <div id="contenu">
-            <h2>Un titre</h2>
-            <p>Un paragraphe</p>
         </div>
-        <p id="footer">Base de Page de Votre Site Web Django</p>
+    </nav>
+
+    <div id="conteneur">
+        <div id="contenu">
+            <h2>Louay's Tps</h2>
+            <p></p>
+        </div>
+        <p id="footer">Base de Django Projects</p>
     </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

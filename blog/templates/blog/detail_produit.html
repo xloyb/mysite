@@ -1,12 +1,68 @@
 {% include 'components/navbar.html' %}
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Post Detail</title>
-</head>
-<body>
-    <h1>{{ post.title }}</h1>
-    <p>{{ post.content }}</p>
-    
-</body>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Détails du Post</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+      }
+
+      form {
+        background-color: #fff;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      p {
+        color: #666;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #3b3b3b;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+    <form method="POST" enctype="multipart/form-data">
+      <h1>Détails du Post : {{ post.title }}</h1>
+      <p>Author : {{post.author}}</p>
+      <p>updated on : {{ post.updated_on }}</p>
+      <p>Content : {{ post.content }}</p>
+      <td>
+        <img
+          src="/media/{{post.image}}"
+          height="250px"
+          width="250px"
+        />
+      </td>
+      <br><br><br>
+      <a href="{% url 'modifier_post' post.pk %}"><button type="button">Modifier</button></a>
+      <a href="{% url 'supprimer_post' post.pk %}"><button type="button">Supprimer</button></a><br>
+    </form>
+  </body>
 </html>

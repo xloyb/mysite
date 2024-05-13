@@ -112,7 +112,7 @@ def register(request):
 #     list=Produit.objects.all()
 #     return render(request,'magasin/vitrine.html',{'list':list})
 
-
+@login_required
 def Main(request):
     context={'val':"Menu Acceuil"}
     return render(request,'acceuil.html',context)
@@ -147,7 +147,7 @@ def nouveauFournisseur(request):
 def index(request):
    list=Produit.objects.all()
    return render(request,'magasin/vitrine.html',{'list':list})
-
+@login_required
 def indexacc(request):
       return render(request,'acceuil.html' )
 

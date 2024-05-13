@@ -1,0 +1,51 @@
+{% extends 'magasin/base.html' %}
+{% block title %} Liste des Fournisseurs {% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header text-center">
+          <h2>Ajouter un fournisseur</h2>
+        </div>
+        <div class="card-body">
+          <form method="POST" class="post-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Enregistrer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- body -->
+<div class="container-fluid mt-3">
+  <div class="row">
+    <!-- all fournisseurs -->
+    <div class="col-lg-9 mx-auto">
+      <div class="card">
+        <div class="card-header">
+          <h4>Liste des fournisseurs</h4>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            {% for fournisseur in fournisseurs %}
+            <div class="col-md-6 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{ fournisseur.nom }}</h5>
+                  <p class="card-text">Adresse: {{ fournisseur.adresse }}</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

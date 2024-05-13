@@ -1,0 +1,23 @@
+# Ignore virtual environment
+venv/
+
+# Ignore database
+db.sqlite3
+
+# Ignore static files directory in development
+staticfiles/
+
+# Ignore media files directory in development
+media/
+
+# Ignore secret settings file
+secret_settings.py
+
+# Ignore migrations
+**/migrations/
+
+# Ignore pycache
+__pycache__/
+
+
+

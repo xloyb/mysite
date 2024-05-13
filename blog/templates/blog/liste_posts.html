@@ -1,0 +1,93 @@
+{% include 'components/navbar.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Posts</title>
+    <!-- Bootstrap CSS -->
+    <style>
+        /* Custom styles */
+        /* body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        } */
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .post-item {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+        }
+
+        .post-title {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .post-title:hover {
+            color: #007bff;
+        }
+
+        .post-actions {
+            margin-top: 10px;
+        }
+
+        .post-actions a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+
+        .post-actions a.update {
+            background-color: #28a745;
+        }
+
+        .post-actions a.delete {
+            background-color: #dc3545;
+            margin-left: 5px;
+        }
+
+        .post-actions a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>List of Posts</h1>
+        <ul>
+            {% for post in posts %}
+                <li class="post-item">
+                    <a href="{% url 'detail_post' post.pk %}" class="post-title">{{ post.title }}</a>
+                    <div class="post-actions">
+                        <a href="{% url 'modifier_post' pk=post.pk %}" class="update">Update</a>
+                        <a href="{% url 'supprimer_post' pk=post.pk %}" class="delete">Delete</a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

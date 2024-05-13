@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .nav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(51 151 226);
+        color: #fff;
+      }
+
+      li {
+        float: left;
+        border-right: 1px solid #bbb;
+      }
+
+      li:last-child {
+        border-right: none;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      a li {
+        
+        color: white;
+    text-align: center;
+    padding-right: 12px;
+    text-decoration: none;
+      }
+
+      li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      .active {
+        background-color: #04aa6d;
+      }
+    </style>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+4BBaCdizLP65FMYMSr3Rniko2S8VnPbCFxE3sIT01sK2WAaQ8Ql7e95mczjATrV" crossorigin="anonymous">
+  </head>
+  <body>
+    <div style="float: right">
+      <ul class="nav">
+        <a class="active" href="#home"><li>A propos</li></a>
+        <a class="active" href="#home"><li>Politiqhe</li></a>
+        <a class="active" href="#home"><li>contact</li></a>
+      </ul>
+    </div>
+    <br />
+    <div>
+      <ul style="text-align: center;" class="nav">
+        <!-- <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li style="float: right"><a href="#about">About</a></li> -->
+    <h1>Bienvenue au Blog de l'ISET</h1>
+    <p>vous permet de publier vos envies</p> 
+    </ul>
+    </div>
+  </body>
+</html>
